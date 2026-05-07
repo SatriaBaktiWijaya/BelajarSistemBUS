@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary-purple: #7452FF;
+  --color-vibrant-green: #AAE500;
+  --color-hot-pink: #FF4BA2;
+  --color-dark-surface: #2C2C2C;
+  
+  --radius-xl-card: 32px;
+  
+  --shadow-purple: 0 8px 16px rgba(116, 82, 255, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-neutral-900 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .isometric-view {
+    transform: rotateX(45deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+  }
+}
